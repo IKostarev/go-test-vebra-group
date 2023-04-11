@@ -63,7 +63,7 @@ func main() {
 			return
 		}
 
-		_, err = db.Exec(jsoncustom`
+		_, err = db.Exec(`
 				INSERT INTO info (seed, result, page, version)
 				VALUES ($1, $2, $3, $4)
 				`, info.Seed, info.Result, info.Page, info.Version)
